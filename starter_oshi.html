@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>推しコレクション</title>
+  <!-- ① Webフォントを読み込む（Google Fonts）) -->    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    
+  <!-- ② 自分で書くCSSファイルを読み込む -->
+  <link rel="stylesheet" href="style.css">
+ 
+  <!--
+    ============================================================
+    コードリテラシーワークショップ Session 2 - CSS基礎
+    スターターファイル（Day1未参加の方向け）
+
+    使い方：
+    1. このファイルと同じフォルダに style.css を作成する
+    2. style.css に CSS を書いていく
+    3. ブラウザで開いて確認する（F5でリロード）
+
+    Day1参加済みの方は自分のHTMLに
+    id・class を追加してご使用ください
+    ============================================================
+  -->
+
+</head>
+<body>
+
+  <!-- ============================================================
+       ヘッダー：サイトのタイトルと説明
+       ============================================================ -->
+  <header>
+    <h1 id="site-title">推しコレクション</h1>
+    <p class="site-description">好きなものを集めたサイトです。テーマはなんでもOK！</p>
+  </header>
+
+  <!-- ============================================================
+       メインコンテンツ
+       ============================================================ -->
+  <main>
+
+    <!-- セクション①：アイテム一覧 -->
+    <section>
+      <h2>アイテム一覧</h2>
+
+      <!-- アイテムカード1 -->
+      <div class="item-card">
+        <!--
+          画像のsrcを自分の推しの画像URLに変えてください
+          例：src="https://example.com/image.jpg"
+          画像URLはGoogle画像検索で右クリック→「画像アドレスをコピー」
+        -->
+        <img src="https://i.pinimg.com/736x/56/b9/7f/56b97f65157bc78989811dced22cc784.jpg" alt="アイテムの画像">
+        <h3 class="item-title">アイテム名をここに書く</h3>
+        <p class="item-description">
+          このアイテムの説明文を書きます。
+          どんなものか、なぜ好きなのかなどを書いてみましょう。
+        </p>
+        <a href="https://example.com" target="_blank">詳しく見る</a>
+      </div>
+
+      <!-- アイテムカード2（コピーして増やせます） -->
+      <div class="item-card">
+        <img src="https://i.pinimg.com/736x/56/b9/7f/56b97f65157bc78989811dced22cc784.jpg" alt="アイテムの画像">
+        <h3 class="item-title">アイテム名をここに書く</h3>
+        <p>
+          このアイテムの説明文を書きます。
+          好きなことを自由に書いてみましょう。
+        </p>
+        <a href="https://example.com" target="_blank">詳しく見る</a>
+      </div>
+
+    </section>
+
+    <!-- セクション②：リアクションフォーム -->
+    <section>
+      <h2>リアクション</h2>
+      <p>このサイトを見てどう思いましたか？</p>
+
+      <form class="reaction-form">
+
+        <label>
+          <input type="radio" name="reaction" value="like">
+          好き！
+        </label>
+
+        <label>
+          <input type="radio" name="reaction" value="want">
+          気になる
+        </label>
+
+        <label>
+          <input type="radio" name="reaction" value="wow">
+          すごい！
+        </label>
+
+        <button type="button" class="submit-btn" type="submit" value="submit-btn">送る</button>
+
+      </form>
+      <!-- いいねボタン -->
+      <div class="like-area">
+        <button id="like-btn" type="button">いいね</button>
+        <p>いいね数: <span id="like-count">0</span></p>
+      </div>
+      <!-- フォームメッセージ -->
+      <p id="form-message"></p>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       フッター
+       ============================================================ -->
+  <footer>
+    <p>© 2026 推しコレクション</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

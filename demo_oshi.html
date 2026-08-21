@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>推しコレクション</title>
+
+  <!--
+    ============================================================
+    コードリテラシーワークショップ Session 2 - CSS基礎
+    テーマ切り替えデモ用 HTML（demo_oshi.html）
+
+    使い方：
+    下の <link rel="stylesheet" href="style_dark.css"> の
+    ファイル名を、好きなテーマCSSのファイル名に書き換えるだけ！
+
+      style_dark.css     … ダーク / テックサイト風
+      style_minimal.css  … ミニマル / タイポグラフィ重視
+      style_pop.css      … ポップ / カジュアル
+      style_glass.css    … グラスモーフィズム
+
+    ※テーマCSSファイルを、このHTMLと同じフォルダに入れてください。
+    ============================================================
+  -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- ↓このファイル名を書き換えてテーマを切り替える -->
+  <link rel="stylesheet" href="style_dark.css">
+</head>
+<body>
+
+  <header>
+    <h1 id="site-title">推しコレクション</h1>
+    <p class="site-description">好きなものを、好きなだけ。わたしの推しを集めたサイトです。</p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>アイテム一覧</h2>
+
+      <!-- カテゴリのタブ（見た目だけ・切り替え動作はSession 3のJavaScriptで） -->
+      <div class="tab-bar">
+        <button class="tab active">すべて</button>
+        <button class="tab">音楽</button>
+        <button class="tab">映画</button>
+        <button class="tab">場所</button>
+        <button class="tab">本</button>
+      </div>
+
+      <div id="item-list">
+
+        <div class="item-card">
+          <span class="item-emoji">🎷</span>
+          <h3 class="item-title">Kind of Blue</h3>
+          <p class="item-description">1959年発売、マイルス・デイヴィスの不朽の名盤。静かな夜に聴くと世界が少しだけ澄んで見える、モードジャズの金字塔。</p>
+          <a class="item-link" href="https://example.com" target="_blank">詳しく見る →</a>
+        </div>
+
+        <div class="item-card">
+          <span class="item-emoji">🎬</span>
+          <h3 class="item-title">ロスト・イン・トランスレーション</h3>
+          <p class="item-description">ソフィア・コッポラ監督。東京の夜、言葉が通じない街でふと触れ合う心の距離。何度観ても新しい発見がある一本。</p>
+          <a class="item-link" href="https://example.com" target="_blank">詳しく見る →</a>
+        </div>
+
+        <div class="item-card">
+          <span class="item-emoji">⛰️</span>
+          <h3 class="item-title">屋久島</h3>
+          <p class="item-description">縄文杉まで往復10時間。苔むす森と樹齢数千年の杉に囲まれると、時間の流れ方が変わる。人生で一度は訪れたい場所。</p>
+          <a class="item-link" href="https://example.com" target="_blank">詳しく見る →</a>
+        </div>
+
+        <div class="item-card">
+          <span class="item-emoji">📚</span>
+          <h3 class="item-title">サピエンス全史</h3>
+          <p class="item-description">ユヴァル・ノア・ハラリ著。なぜホモ・サピエンスだけが繁栄したのか。人類7万年の歩みを一気に俯瞰できる知的興奮の書。</p>
+          <a class="item-link" href="https://example.com" target="_blank">詳しく見る →</a>
+        </div>
+
+        <div class="item-card">
+          <span class="item-emoji">🎸</span>
+          <h3 class="item-title">In Rainbows</h3>
+          <p class="item-description">Radioheadが2007年に発表した名盤。聴くたびに沈み込むような深さと美しさ。雨の日のヘビーローテーション。</p>
+          <a class="item-link" href="https://example.com" target="_blank">詳しく見る →</a>
+        </div>
+
+        <div class="item-card">
+          <span class="item-emoji">🍜</span>
+          <h3 class="item-title">中華そば 一期</h3>
+          <p class="item-description">煮干しの香りが立つ端正な一杯。並んででも食べたい、心のソウルフード。スープを最後まで飲み干してしまう。</p>
+          <a class="item-link" href="https://example.com" target="_blank">詳しく見る →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>リアクション</h2>
+      <p>このコレクション、どう思いましたか？</p>
+      <form class="reaction-form">
+        <label><input type="radio" name="reaction" value="like"> 好き！</label>
+        <label><input type="radio" name="reaction" value="want"> 気になる</label>
+        <label><input type="radio" name="reaction" value="wow"> すごい！</label>
+        <button type="submit" class="submit-btn">送る</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 推しコレクション ／ コードリテラシーワークショップ Session 2</p>
+  </footer>
+
+</body>
+</html>
